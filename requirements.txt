@@ -1,2 +1,2 @@
 ruff==v0.0.274
-pylint==4.0.0
+pylint==3.x
