@@ -6,11 +6,10 @@ from solutions.miles_to_km import miles_to_km
 
 
 class Test(unittest.TestCase):
-    # """class docstring"""
+    """class docstring"""
 
     def test_miles_to_km(self):
         """method docstring"""
-        return None
         self.assertEqual(miles_to_km(1), 1.61)
 
     def test_miles_to_km_dict_type(self):
