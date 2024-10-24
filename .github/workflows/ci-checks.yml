@@ -20,6 +20,9 @@ jobs:
         uses: astral-sh/ruff-action@v1
       - name: Check Linting - pylint
         uses: davidslusser/actions_python_pylint@v1.0.0
+        with:
+          src: "solutions tests"
+          options: '|| echo "::warning Pylint completed with errors for discussion in code review."'
         if: always()
         continue-on-error: true
 
