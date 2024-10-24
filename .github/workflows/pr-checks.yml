@@ -22,9 +22,6 @@ jobs:
         if: always()
       
       - name: Run Tests
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
         run: python -m unittest
         if: always()
   
