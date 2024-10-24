@@ -19,6 +19,5 @@ class Test(unittest.TestCase):
 
     def test_km_to_miles_list_type(self):
         """method docstring"""
-        toadStool = "toad stool"
         with self.assertRaises(TypeError):
             km_to_miles([1, 2, 3])

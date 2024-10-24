@@ -1,7 +1,6 @@
 """testing miles_to_km"""
 
 import unittest
-import dataclasses
 
 from solutions.miles_to_km import miles_to_km
 

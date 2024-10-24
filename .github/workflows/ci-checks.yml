@@ -23,7 +23,7 @@ jobs:
         uses: davidslusser/actions_python_pylint@v1.0.0
         if: always()
 
-  tests:
+  testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
