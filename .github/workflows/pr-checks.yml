@@ -3,11 +3,7 @@
 
 name: PR Checks
 
-on:
-  push:
-    branches: [main, dev]
-  pull_request:
-    branches: [main]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -18,19 +14,21 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
     
-    check:
-      steps:
-        - name: Check Formatting
-          uses: astral-sh/ruff-action@v1
-          with:
-              args: "format --check"
-          if: always()
+  check_formatting:
+    - name: Check Formatting
+      uses: astral-sh/ruff-action@v1
+      with:
+          args: "format --check"
+      if: always()
         
-        - name: Check Linting
-          uses: astral-sh/ruff-action@v1
-          if: always()
-        
+
+  check_linting:
+      - name: Check Linting
+        uses: astral-sh/ruff-action@v1
+        if: always()
+
+  run_tests:
         - name: Run Tests
           run: python -m unittest
           if: always()
-  
+
