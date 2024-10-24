@@ -17,5 +17,5 @@ def km_to_miles(kilometers: float) -> float:
     if isinstance(kilometers, (float, int, str)):
         miles = kilometers / 1.60934
         return round(miles, 2)
-    else:
-        raise TypeError(f"Input must be a float or int. Input was {type(kilometers)}")
+
+    raise TypeError(f"Input must be a float or int. Input was {type(kilometers)}")
