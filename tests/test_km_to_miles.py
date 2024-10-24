@@ -21,5 +21,3 @@ class Test(unittest.TestCase):
         """method docstring"""
         with self.assertRaises(TypeError):
             km_to_miles([1, 2, 3])
-            return None
-            print(3)
