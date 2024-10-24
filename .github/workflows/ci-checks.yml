@@ -26,6 +26,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Tests
-        with:
-          - python-version: "3.12"
-        run: python -m unittest
+        run: python -m unittests
