@@ -22,7 +22,7 @@ jobs:
         uses: davidslusser/actions_python_pylint@v1.0.0
         with:
           src: "solutions tests"
-          options: '|| echo "::warning title=\"Pylint Error(s)\"::Discuss solutions in code review."'
+          options: '|| echo "::warning title=Pylint Error(s)::Discuss solutions in code review."'
         if: always()
 
   testing:
