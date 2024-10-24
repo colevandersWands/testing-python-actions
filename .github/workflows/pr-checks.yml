@@ -18,22 +18,19 @@ jobs:
         python-version: ["3.8", "3.9", "3.10", "3.11"]
         include:
           - python-version: "3.11"
-            use_pandas: 1
     steps:
       - uses: actions/checkout@v3
-      - run: pipx install poetry
-
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: poetry
-      - run: poetry install
+          cache: pip
+      - run: pip install -r requirements.txt
 
       - name: Check Formatting
-        run: poetry run ruff format --check
+        run: pip run ruff format --check
       
       - name: Check Linting
-        run: poetry run ruff check
+        run: pip run ruff check
       
       - name: Run Tests
         run: python -m unittest
