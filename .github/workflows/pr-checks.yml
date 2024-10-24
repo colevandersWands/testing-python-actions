@@ -22,10 +22,13 @@ jobs:
         uses: astral-sh/ruff-action@v1
         with:
             args: "format --check"
+        if: always()
       
       - name: Check Linting
         uses: astral-sh/ruff-action@v1
+        if: always()
       
       - name: Run Tests
         run: python -m unittest
+        if: always()
   
