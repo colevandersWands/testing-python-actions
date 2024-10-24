@@ -13,22 +13,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-    
+
   check_formatting:
     - name: Check Formatting
+      needs: build
       uses: astral-sh/ruff-action@v1
       with:
-          args: "format --check"
+        args: "format --check"
       if: always()
-        
 
   check_linting:
-      - name: Check Linting
-        uses: astral-sh/ruff-action@v1
-        if: always()
+    - name: Check Linting
+      needs: build
+      uses: astral-sh/ruff-action@v1
+      if: always()
 
   run_tests:
-        - name: Run Tests
-          run: python -m unittest
-          if: always()
-
+    - name: Run Tests
+      needs: build
+      run: python -m unittest
+      if: always()
