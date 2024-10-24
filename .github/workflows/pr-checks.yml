@@ -6,13 +6,10 @@ name: PR Checks
 on: [push, pull_request]
 
 jobs:
-  build:
+  "PR Checks":
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
     
       - name: Check Formatting
         uses: astral-sh/ruff-action@v1
@@ -25,6 +22,9 @@ jobs:
         if: always()
       
       - name: Run Tests
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
         run: python -m unittest
         if: always()
   
