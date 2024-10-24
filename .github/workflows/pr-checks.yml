@@ -3,7 +3,7 @@ name: PR Checks
 on: [push, pull_request]
 
 jobs:
-  check_formatting:
+  formatting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -12,14 +12,14 @@ jobs:
         with:
           args: "format --check"
 
-  check_linting:
+  linting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Check Linting
         uses: astral-sh/ruff-action@v1
 
-  run_tests:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
