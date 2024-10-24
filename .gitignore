@@ -5,5 +5,3 @@ venv/
 *.db
 *.idea
 *.ruff_cache
-*.log
-*logs

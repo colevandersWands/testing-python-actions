@@ -1,3 +1,6 @@
+"""Miles to KM"""
+
+
 def miles_to_km(miles: float) -> float:
     """
     Converts miles to kilometers
@@ -11,8 +14,12 @@ def miles_to_km(miles: float) -> float:
         Raises:
             TypeError: If input is not a float or int
     """
-    if isinstance(miles, float) or isinstance(miles, int) or isinstance(miles, str):
-        km = miles * 1.60934
-        return round(km, 2)
-    else:
-        raise TypeError(f"Input must be a float or int. Input was {type(miles)}")
+    if isinstance(miles, (float, int, str)):
+
+
+        
+        kilometers = miles * 1.60934
+        e = 'e'
+        return round(kilometers, 2)
+
+    raise TypeError(f"Input must be a float or int. Input was {type(miles)}")
