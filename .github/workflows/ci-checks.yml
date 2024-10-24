@@ -24,7 +24,6 @@ jobs:
           src: "solutions tests"
           options: '|| echo "::warning Pylint completed with errors for discussion in code review."'
         if: always()
-        continue-on-error: true
 
   testing:
     runs-on: ubuntu-latest
