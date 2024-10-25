@@ -4,7 +4,10 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   "CI Checks":
-    uses: colevandersWands/et6_ci_checks_dev@v0.0.0
-    with:
-      src: "solutions tests"
-            
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Code Quality Checks
+      - uses: colevandersWands/et6_ci_checks_dev@v0.0.0
+        with:
+          src: "solutions tests"
+              
