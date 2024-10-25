@@ -19,7 +19,7 @@ jobs:
       - name: Check Linting
         uses: colevandersWands/et6_linting_dev@main
         with:
-          args: "solutions tests"
+          src: "solutions tests"
       
   testing:
     runs-on: ubuntu-latest
