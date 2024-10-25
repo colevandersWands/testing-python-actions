@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check Linting
-        uses: colevandersWands/et6_linting_dev
+        uses: colevandersWands/et6_linting_dev@main
         with:
           args: "solutions tests"
       
