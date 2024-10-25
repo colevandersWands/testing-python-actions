@@ -1,0 +1,6 @@
+- vscode extensions
+- vscode settings 
+    format on save 
+    autosave
+    ...
+- 

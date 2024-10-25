@@ -1,0 +1,5 @@
+ruff==v0.0.274
+pylint==3.3.1
+mdformat==0.7.18
+mdformat-tables==v1.0.0
+pymarkdownlnt==0.9.24

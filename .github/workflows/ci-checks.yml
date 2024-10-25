@@ -12,23 +12,27 @@ jobs:
         with:
           args: "format --check"
 
-  linting:
+  linting_py:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check Linting
+      - name: Check Python Linting
         uses: colevandersWands/et6_linting_dev@main
         with:
           src: "solutions tests"
-      
+
+  linting_md:
+    runs-on: ubuntu-latest
+    steps:
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v3.3.0
+        with:
+          files: .
+          
   testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # - name: setup python
-      #   uses: actions/setup-python@v5
-      #   with:
-      #     python-version: "3.x"
       - name: python version
         run: python --version
         shell: bash
