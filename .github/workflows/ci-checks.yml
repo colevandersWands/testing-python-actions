@@ -3,11 +3,35 @@ name: CI Checks
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  ci_checks:
+  formatting:
     runs-on: ubuntu-latest
     steps:
-      - name: Run Code Quality Checks
-        uses: colevandersWands/et6_ci_checks_dev@main
+      - uses: actions/checkout@v4
+      - name: Check Formatting
+        uses: astral-sh/ruff-action@v1
         with:
-          src: "solutions tests"
-              
+          args: "format --check"
+
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Linting
+        uses: colevandersWands/et6_linting_dev
+        with:
+          args: "solutions tests"
+      
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # - name: setup python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: "3.x"
+      - name: python version
+        run: python --version
+        shell: bash
+      - name: Run Tests
+        run: python -m unittest
+        shell: bash
