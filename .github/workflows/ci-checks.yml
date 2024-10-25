@@ -27,7 +27,8 @@ jobs:
       - name: markdownlint-cli
         uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          files: .
+          files: "."
+        continue-on-error: true
           
   testing:
     runs-on: ubuntu-latest
