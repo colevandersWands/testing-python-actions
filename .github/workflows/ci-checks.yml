@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Code Quality Checks
-        uses: colevandersWands/et6_ci_checks_dev@v0.0.0
+        uses: colevandersWands/et6_ci_checks_dev@v0
         with:
           src: "solutions tests"
               
