@@ -24,11 +24,15 @@ jobs:
   linting_md:
     runs-on: ubuntu-latest
     steps:
-      - name: markdownlint-cli
-        uses: nosborn/github-action-markdown-cli@v3.3.0
-        with:
-          files: "."
-        continue-on-error: true
+        - name: Check Markdown Linting
+          uses: avto-dev/markdown-lint@v1
+          with:
+            args: './'
+      # - name: Check Markdown Linting
+      #   uses: nosborn/github-action-markdown-cli@v3.3.0
+      #   with:
+      #     files: "."
+      #   continue-on-error: true
           
   testing:
     runs-on: ubuntu-latest
