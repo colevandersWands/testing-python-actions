@@ -34,7 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pymarkdown
       - name: Markdown - Check Linting
-        run: pymarkdown scan "**/*.md"   || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'
+        run: "pymarkdown scan \"**/*.md\"   || echo '::warning title=Pymarkdown Error(s)::Discuss solutions and trade-offs in code review.'"
         shell: bash
 
   py_formatting:
