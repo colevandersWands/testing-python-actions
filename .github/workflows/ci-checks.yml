@@ -21,24 +21,24 @@ jobs:
         with:
           src: "solutions tests"
 
-  linting_md_a:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check Markdown Linting A
-        # uses: avto-dev/markdown-lint@v1
-        uses: docker://avtodev/markdown-lint:v1
-        with:
-          args: "**/*.md"
+  # this one doesn't log errors in the summary
+  # linting_md_a:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Check Markdown Linting A
+  #       uses: docker://avtodev/markdown-lint:v1
+  #       with:
+  #         args: "**/*.md"
 
-  linting_md_b:
+  linting_md:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Check Markdown Linting B
         uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          files:  "**/*.md"
+          files: .
 
   testing:
     runs-on: ubuntu-latest
