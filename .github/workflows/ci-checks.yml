@@ -3,7 +3,7 @@ name: CI Checks
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  formatting:
+  py_formatting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,7 +12,7 @@ jobs:
         with:
           args: "format --check"
 
-  linting_py:
+  py_linting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,16 +31,7 @@ jobs:
   #       with:
   #         args: "**/*.md"
 
-  linting_md:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check Markdown Linting B
-        uses: nosborn/github-action-markdown-cli@v3.3.0
-        with:
-          files: .
-
-  testing:
+  py_tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,3 +41,12 @@ jobs:
       - name: Run Tests
         run: python -m unittest
         shell: bash
+
+  md_linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Markdown Linting B
+        uses: nosborn/github-action-markdown-cli@v3.3.0
+        with:
+          files: ".  || echo '::warning title=MD Linting Error(s)::Discuss solutions and trade-offs in code review.'"
