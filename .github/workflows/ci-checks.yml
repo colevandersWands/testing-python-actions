@@ -34,7 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pymarkdown
       - name: Markdown - Check Linting
-        run: pymarkdown scan \"**/*.md\"
+        run: pymarkdown scan "**/*.md"
         shell: bash
 
   py_formatting:
