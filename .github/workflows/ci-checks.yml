@@ -3,23 +3,14 @@ name: CI Checks
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  py_formatting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check Formatting
-        uses: astral-sh/ruff-action@v1
-        with:
-          args: "format --check"
-
-  py_linting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check Python Linting
-        uses: colevandersWands/et6_linting_dev@main
-        with:
-          src: "solutions tests"
+  # md_linting:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Check Markdown Linting B
+  #       uses: nosborn/github-action-markdown-cli@v3.3.0
+  #       with:
+  #         files: ".  || echo '::warning title=MD Linting Error(s)::Discuss solutions and trade-offs in code review.'"
 
   # this one doesn't log errors in the summary
   # linting_md_a:
@@ -31,6 +22,39 @@ jobs:
   #       with:
   #         args: "**/*.md"
 
+  md_linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: python version
+        run: python --version
+        shell: bash
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pymarkdown
+      - name: Markdown - Check Linting
+        run: pymarkdown scan "**/*.md"   || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'
+        shell: bash
+
+  py_formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python - Check Formatting
+        uses: astral-sh/ruff-action@v1
+        with:
+          args: "format --check"
+
+  py_linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python - Check Linting
+        uses: colevandersWands/et6_linting_dev@main
+        with:
+          src: "solutions tests"
+
   py_tests:
     runs-on: ubuntu-latest
     steps:
@@ -38,15 +62,6 @@ jobs:
       - name: python version
         run: python --version
         shell: bash
-      - name: Run Tests
+      - name: Python - Run Tests
         run: python -m unittest
         shell: bash
-
-  md_linting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check Markdown Linting B
-        uses: nosborn/github-action-markdown-cli@v3.3.0
-        with:
-          files: ".  || echo '::warning title=MD Linting Error(s)::Discuss solutions and trade-offs in code review.'"
