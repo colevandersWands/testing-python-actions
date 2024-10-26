@@ -24,10 +24,11 @@ jobs:
   linting_md_a:
     runs-on: ubuntu-latest
     steps:
-        - name: Check Markdown Linting A
-          uses: avto-dev/markdown-lint@v1
-          with:
-            args: .
+      - name: Check Markdown Linting A
+        # uses: avto-dev/markdown-lint@v1
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+          args: "./**/*.md"
 
   linting_md_b:
     runs-on: ubuntu-latest
@@ -35,8 +36,8 @@ jobs:
       - name: Check Markdown Linting B
         uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          files: .
-          
+          files:  "./**/*.md"
+
   testing:
     runs-on: ubuntu-latest
     steps:
