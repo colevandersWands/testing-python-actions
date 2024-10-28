@@ -1,27 +1,8 @@
-name: CI Checks
+name: ET CI Checks
 
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  # md_linting:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - name: Check Markdown Linting B
-  #       uses: nosborn/github-action-markdown-cli@v3.3.0
-  #       with:
-  #         files: ".  || echo '::warning title=MD Linting Error(s)::Discuss solutions and trade-offs in code review.'"
-
-  # this one doesn't log errors in the summary
-  # linting_md_a:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - name: Check Markdown Linting A
-  #       uses: docker://avtodev/markdown-lint:v1
-  #       with:
-  #         args: "**/*.md"
-
   md_linting:
     runs-on: ubuntu-latest
     steps:
@@ -50,10 +31,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Python - Check Linting
-        uses: colevandersWands/et6_linting_dev@main
-        with:
-          src: "solutions tests"
+
+      # passing ruff linting is required
+      - name: Python - Check Linting - ruff
+        uses: astral-sh/ruff-action@v1
+
+      # passing pylint is not required - discuss errors in code review
+      # adapted from https://github.com/davidslusser/actions_python_pylint/tree/main
+      - name: python version
+        run: python --version
+        shell: bash
+        if: always()
+      - name: install pylint
+        run: |
+          python -  m pip install --upgrade pip
+          pip install pylint
+        shell: bash
+      - name: Python - Check Linting - pylint
+        run: "pylint ${{ inputs.src }}  || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'"
+        shell: bash
 
   py_tests:
     runs-on: ubuntu-latest
