@@ -15,7 +15,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pymarkdownlnt
       - name: Markdown - Check Linting
-        run: pymarkdown scan "**/*.md"
+        run: pymarkdown scan -r .
         shell: bash
 
   py_formatting:
@@ -48,7 +48,7 @@ jobs:
           pip install pylint
         shell: bash
       - name: Python - Check Linting - pylint
-        run: "pylint ${{ inputs.src }}  || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'"
+        run: "pylint solutions tests  || echo '::warning title=Pylint Error(s)::Discuss solutions and trade-offs in code review.'"
         shell: bash
 
   py_tests:
