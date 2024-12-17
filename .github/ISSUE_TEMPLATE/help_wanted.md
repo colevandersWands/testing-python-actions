@@ -1,5 +1,5 @@
 ---
-name: help-wanted
+name: help wanted
 about:
   A template issue for when you're blocked on certain lines of code.  This
   template has a lot of sections to get you thinking about your question, you
