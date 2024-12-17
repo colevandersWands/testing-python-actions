@@ -1,11 +1,6 @@
----
-name: help wanted
-about:
-  A template issue for when you're blocked on certain lines of code.  This
-  template has a lot of sections to get you thinking about your question, you
-  don't need to fill in every one of them
-labels: "help wanted"
----
+______________________________________________________________________
+
+## name: help wanted about: A template issue for when you're blocked on certain lines of code. This template has a lot of sections to get you thinking about your question, you don't need to fill in every one of them labels: "help wanted"
 
 <!--
   Make your issue easy to find:

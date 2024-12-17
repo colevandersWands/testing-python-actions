@@ -6,7 +6,7 @@
 >
 > - [Norm Kerth](http://www.amazon.com/Project-Retrospectives-Handbook-Reviews-Dorset-ebook/dp/B00DY3KQJU/ref=tmm_kin_swatch_0?_encoding=UTF8&sr=&qid=)
 
-All done :\)
+All done :)
 
 Your team has either finished the project ahead of time, or the deadline has
 arrived and you're still not finished. No problem either way!
@@ -51,4 +51,6 @@ paragraphs, links, images ... whatever is most clear.
 
 ## `/collaboration/retrospective.md`
 
-Fill out the template file in [/collaboration/retrospective.md](../retrospective.md) as a group, either in a call or asynchronously.
+Fill out the template file in
+[/collaboration/retrospective.md](../retrospective.md) as a group, either in a
+call or asynchronously.

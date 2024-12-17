@@ -1,9 +1,6 @@
----
-name: meeting agenda
-about: A template issue for planning meetings
-title: "Agenda: "
-labels: agenda
----
+______________________________________________________________________
+
+## name: meeting agenda about: A template issue for planning meetings title: "Agenda: " labels: agenda
 
 <!-- Make your issue easy to find:
 

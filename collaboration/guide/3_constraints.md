@@ -16,4 +16,5 @@ team.
 
 ## `/collaboration/constraints.md`
 
-Fill out the template file in [/collaboration/constraints.md](../constraints.md) as a group, either in a call or asynchronously.
+Fill out the template file in [/collaboration/constraints.md](../constraints.md)
+as a group, either in a call or asynchronously.

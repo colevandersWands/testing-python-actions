@@ -13,3 +13,5 @@ ignore:
   - .ruff_cache
   - .pytest_cache
   - __pycache__
+  - .ls-lint.yml
+  - .markdownlint.yml

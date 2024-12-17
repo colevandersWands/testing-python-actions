@@ -7,16 +7,18 @@ Some boundaries around our project.
 ## External
 
 <!--
-  constraints coming from the outside that your team has no control over. these may include:
+  constraints coming from the outside that your team has no control over:
   - project deadlines
   - number of unit tests required to pass a code review
   - technologies (sometimes a client will tell you what to use)
+  - power or connectivity
+  - ...
 -->
 
 ## Internal: Involuntary
 
 <!--
-  constraints that come from within your team, and you have no control over. they may include:
+  constraints that come from within your team, and you have no control over:
   - each of your individual skill levels
   - amount of time available to work on the project
 -->

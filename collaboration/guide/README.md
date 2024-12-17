@@ -1,10 +1,13 @@
 # Group Study: Guide
 
-A brief guide to collaboration in this repository. It covers repository configuration, setting learning goals, basic collaboration documents, and a branching workflow.
+A brief guide to collaboration in this repository. It covers repository
+configuration, setting learning goals, basic collaboration documents, and a
+branching workflow.
 
-There is hopefully enough in here to get you started, but we know there are still gaps. Let us know what's missing so we can fill it in!
+There is hopefully enough in here to get you started, but we know there are
+still gaps. Let us know what's missing so we can fill it in!
 
----
+______________________________________________________________________
 
 ## Suggested Study
 
@@ -18,10 +21,12 @@ Emerging Talent workshops that may be helpful:
 
 #### Visual Studio Code (VSCode)
 
-VSC is a very popular development environment. Take a look through these links to start learning all you can do with VSC. You don't need to understand everything right away, there will
-be more than enough time to practice:
+VSC is a very popular development environment. Take a look through these links
+to start learning all you can do with VSC. You don't need to understand
+everything right away, there will be more than enough time to practice:
 
-- [ArjanCodes](https://www.youtube.com/watch?v=fj2tuTIcUys) - _setting up VSCode_
+- [ArjanCodes](https://www.youtube.com/watch?v=fj2tuTIcUys) - _setting up
+  VSCode_
 - [academind VSC tutorial](https://www.youtube.com/watch?v=VqCgcpAypFQ)
 - [shortcuts cheatsheet](https://vscode-shortcuts.com/)
 - [The Coding Train](https://www.youtube.com/watch?v=yJw0SyKO9IU)
@@ -35,7 +40,9 @@ be more than enough time to practice:
 
 #### VSCode Debugging
 
-Some tutorial series covering how to use the Python debugger in VSCode. These tutorials are not in a special order, look around and find the one that works best for you:
+Some tutorial series covering how to use the Python debugger in VSCode. These
+tutorials are not in a special order, look around and find the one that works
+best for you:
 
 - [Boris Paskhaver](https://www.youtube.com/playlist?list=PLQzZ4krxwT9Yay3kz8ly4wXiYJHzMtsWi)
 - [Ghost Together](https://www.youtube.com/watch?v=oCcTiRGPogQ)
@@ -48,7 +55,8 @@ Some tutorial series covering how to use the Python debugger in VSCode. These tu
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-- [Python Preview](https://marketplace.visualstudio.com/items?itemName=dongli.python-preview) (basically Python Tutor inside VSCode)
+- [Python Preview](https://marketplace.visualstudio.com/items?itemName=dongli.python-preview)
+  (basically Python Tutor inside VSCode)
 - [Test Explorer](https://marketplace.visualstudio.com/items?itemName=LittleFoxTeam.vscode-python-test-adapter)
 - [Python Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent)
 
@@ -66,7 +74,7 @@ Some tutorial series covering how to use the Python debugger in VSCode. These tu
   - [iTerm](https://sr6033.github.io/lterm/) - online
 - [A huge cheat sheet](https://gist.github.com/LeCoupa/122b12050f5fb267e75f)
 
----
+______________________________________________________________________
 
 ### Local Development With Git
 
@@ -85,7 +93,7 @@ Some tutorial series covering how to use the Python debugger in VSCode. These tu
 - [Understand how to use Atomic Commits](https://curiousprogrammer.io/blog/how-to-craft-your-changes-into-small-atomic-commits-using-git)
 - [rebasic](https://github.com/lpmi-13/rebasic)
 
----
+______________________________________________________________________
 
 ### Local/Remote Development
 
@@ -107,15 +115,13 @@ Some tutorial series covering how to use the Python debugger in VSCode. These tu
   - [First Week on GitHub](https://lab.github.com/githubtraining/first-week-on-github)
 - [The Net Ninja](https://www.youtube.com/watch?v=QV0kVNvkMxc&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=8)
 
----
+______________________________________________________________________
 
 ### Remote Collaboration
 
 - [Building Software Together](https://buildtogether.tech/) _a student's guide
   to being a compassionate programmer_ - The technical parts are more advanced
   than what you're learning now, but all the rest is gold.
-
-#
 
 ### Collaborating on GitHub
 
@@ -133,7 +139,7 @@ Some tutorial series covering how to use the Python debugger in VSCode. These tu
   [reference 2](https://help.github.com/articles/autolinked-references-and-urls/)
 - [closing Issues using keywords](https://help.github.com/en/enterprise/2.16/user/github/managing-your-work-on-github/closing-issues-using-keywords)
 
----
+______________________________________________________________________
 
 ### Open Source Development
 

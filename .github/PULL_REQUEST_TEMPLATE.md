@@ -1,8 +1,6 @@
----
-name: solution review
-about: A template PR for code review with a checklist
----
+______________________________________________________________________
 
+## name: solution review about: A template PR for code review with a checklist
 
 <!--
   make this PR easy to find:
@@ -19,7 +17,8 @@ about: A template PR for code review with a checklist
 
 - [ ] The file name describes the function's behavior
 - [ ] There is a module docstring in the function file
-- [ ] The test file's name matches the function file name - `/tests/test_file_name.py`
+- [ ] The test file's name matches the function file name -
+  `/tests/test_file_name.py`
 - [ ] There is a module docstring in the tests file
 
 ### Unit Tests
@@ -76,7 +75,8 @@ about: A template PR for code review with a checklist
 - [ ] The code passes the formatting checks
 - [ ] The code passes all Ruff linting checks
 - [ ] The code has no (reasonable) Pylint errors
-  - In code review, you can decide when fixing a Pylint error is helpful and when it's too restricting.
+  - In code review, you can decide when fixing a Pylint error is helpful and
+    when it's too restricting.
 - [ ] Variables are named with snake_case
 - [ ] Variable names are clear and helpful
 - [ ] The code follows the strategy as simply as possible
