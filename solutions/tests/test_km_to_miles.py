@@ -2,7 +2,7 @@
 
 import unittest
 
-from solutions.km_to_miles import km_to_miles
+from ..km_to_miles import km_to_miles
 
 
 class Test(unittest.TestCase):
